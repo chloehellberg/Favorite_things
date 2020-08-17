@@ -1,3 +1,7 @@
+
+let list1 = []
+
+
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     const person1Input = $("input#person1").val();
@@ -7,14 +11,20 @@ $(document).ready(function() {
     const verbInput = $("input#verb").val();
     const nounInput = $("input#noun").val();
 
-    $(".person1").text(person1Input);
-    $(".person2").text(person2Input);
-    $(".animal").text(animalInput);
+  
+    list1.push(person1Input,person2Input,animalInput,exclamationInput,verbInput,nounInput)
+    // console.log(list)
+    
+    $(".person1").text(list1[0]);
+    $(".person2").text(list[1]);
+    $(".animal").text(list[2]);
     $(".exclamation").text(exclamationInput);
     $(".verb").text(verbInput);
     $(".noun").text(nounInput);
 
-    $("#story").show();
+
+
+    $("#arrays").show();
 
     event.preventDefault();
   });
